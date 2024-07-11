@@ -1,94 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/calendar.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/calendar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap" rel="stylesheet" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body class="main-body">
     <header>
-        <div class="header_logo"><p>Trivex</p></div>
-        <div class="calendar">
-            <h3>September</h3>
-            <nav>
-              <button id="prev"></button>
-              <button id="next"></button>
-            </nav>
+      <div class="header_logo"><p>Trivex</p></div>
+      <div class="calendar">
+        <h3>September</h3>
+        <div class="button-scroll-month_wrapper">
+          <button class="button-scroll-month">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="button-scroll-month_icon">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+          <button class="button-scroll-month">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="button-scroll-month_icon button-scroll-month_icon_reversed">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+          </button>
         </div>
-        <div class="header_controller">
-            <div class="calendar_menu">
-                <select>
-                    <option value="day">day</option>
-                    <option value="week">week</option>
-                    <option value="month" selected>month</option>
-                </select>
-            </div>
-            <div class="authorization__button">
-                <a href="">Sing in</a>
-            </div>  
+      </div>
+      <div class="header_controller">
+        <div class="calendar_menu">
+          <select>
+            <option value="day">day</option>
+            <option value="week">week</option>
+            <option value="month" selected>month</option>
+          </select>
         </div>
+        <div class="authorization__button">
+          <a href="">Sing in</a>
+        </div>
+      </div>
     </header>
+    <main class="page_main">
+      <section class="side_bar"></section>
 
-    <section class="side_bar">
-       
-    </section>
-
-    <div class="calendar_wrapper">
-        <section class="calendar">
-            <ul class="days">
-                <li>Sun</li>
-                <li>Mon</li>
-                <li>Tue</li>
-                <li>Wed</li>
-                <li>Thu</li>
-                <li>Fri</li>
-                <li>Sat</li>
-            </ul>
-            <ul class="dates">
-                <li>30</li>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15</li>
-                <li>16</li>
-                <li>17</li>
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
-                <li>21</li>
-                <li>22</li>
-                <li>23</li>
-                <li>24</li>
-                <li>25</li>
-                <li>26</li>
-                <li>27</li>
-                <li>28</li>
-                <li>29</li>
-                <li>30</li>
-                <li>31</li>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-
-            </ul>
-        </section>    
-    </div>
-    
-    <script src="script/script.js" defer></script>  
-</body>
+      <div class="calendar_wrapper">
+        <ul class="days-of-week">
+          <li class="day">Monday</li>
+          <li class="day">Tuesday</li>
+          <li class="day">Wednesday</li>
+          <li class="day">Thursday</li>
+          <li class="day">Friday</li>
+          <li class="day">Saturday</li>
+          <li class="day">Saturday</li>
+        </ul>
+        <ul class="dates"></ul>
+      </div>
+    </main>
+    <script src="script/script.js" defer></script>
+  </body>
 </html>
+
+<!-- <div class="calendar_wrapper">
+      <section class="calendar">
+        <ul class="days">
+          <li class="days_cell">Sun</li>
+          <li class="days_cell">Mon</li>
+          <li class="days_cell">Tue</li>
+          <li class="days_cell">Wed</li>
+          <li class="days_cell">Thu</li>
+          <li class="days_cell">Fri</li>
+          <li class="days_cell">Sat</li>
+        </ul>
+        <ul class="dates">
+          <li class="dates_cell">30</li>
+          <li class="dates_cell">1</li>
+          <li class="dates_cell">2</li>
+          <li class="dates_cell">3</li>
+          <li class="dates_cell">4</li>
+          <li class="dates_cell">5</li>
+          <li class="dates_cell">6</li>
+          <li class="dates_cell">7</li>
+          <li class="dates_cell">8</li>
+          <li class="dates_cell">9</li>
+          <li class="dates_cell">10</li>
+          <li class="dates_cell">11</li>
+          <li class="dates_cell">12</li>
+          <li class="dates_cell">13</li>
+          <li class="dates_cell">14</li>
+          <li class="dates_cell">15</li>
+          <li class="dates_cell">16</li>
+          <li class="dates_cell">17</li>
+          <li class="dates_cell">18</li>
+          <li class="dates_cell">19</li>
+          <li class="dates_cell">20</li>
+          <li class="dates_cell">21</li>
+          <li class="dates_cell">22</li>
+          <li class="dates_cell">23</li>
+          <li class="dates_cell">24</li>
+          <li class="dates_cell">25</li>
+          <li class="dates_cell">26</li>
+          <li class="dates_cell">27</li>
+          <li class="dates_cell">28</li>
+          <li class="dates_cell">29</li>
+          <li class="dates_cell">30</li>
+          <li class="dates_cell">31</li>
+          <li class="dates_cell">1</li>
+          <li class="dates_cell">2</li>
+          <li class="dates_cell">3</li>
+        </ul>
+      </section> 
+    </div>-->

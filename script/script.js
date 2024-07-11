@@ -2,20 +2,7 @@ const header = document.querySelector(".calendar h3");
 const dates = document.querySelector(".dates");
 const navs = document.querySelectorAll("#prev, #next");
 
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July", 
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 let date = new Date();
 let month = date.getMonth();
@@ -30,21 +17,16 @@ function renderCalendar() {
   let datesHtml = "";
 
   for (let i = start; i > 0; i--) {
-    datesHtml += `<li class="inactive">${endDatePrev - i + 1}</li>`;
+    datesHtml += `<li class="dates_cell inactive">${endDatePrev - i + 1}</li>`;
   }
 
   for (let i = 1; i <= endDate; i++) {
-    let className =
-      i === date.getDate() &&
-      month === new Date().getMonth() &&
-      year === new Date().getFullYear()
-        ? ' class="today"'
-        : "";
-    datesHtml += `<li${className}>${i}</li>`;
+    let className = i === date.getDate() && month === new Date().getMonth() && year === new Date().getFullYear() ? ' class="dates_cell today"' : 'class="dates_cell"';
+    datesHtml += `<li ${className}>${i}</li>`;
   }
 
   for (let i = end; i < 6; i++) {
-    datesHtml += `<li class="inactive">${i - end + 1}</li>`;
+    datesHtml += `<li class="dates_cell inactive">${i - end + 1}</li>`;
   }
 
   dates.innerHTML = datesHtml;
